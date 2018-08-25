@@ -60,7 +60,7 @@ header{
     #header_in{
         padding: 10px;
         .logo{
-            padding-bottom: 10px;
+            padding-bottom: 5px;
         }
         .header_icon{
             padding: 0;
@@ -70,56 +70,62 @@ header{
                 list-style: none;
                 display: inline-block;
             }
-            .sp_navi{
+        }
+        .sp_navi{
+            text-align: center;
+            img{
                 padding: 0 5px;
-                display: inline-block;
             }
-            .sp_navi_li{
-                width: 100%;
-                position: absolute;
-                top: 40px;
-                right: 0;
-                left: 0;
-                border: 1px solid #eee;
-                background: white;
-                margin: 0 auto;
+        }
+        .sp_navi_li{
+            width: 100%;
+            position: absolute;
+            top: 40px;
+            right: 0;
+            left: 0;
+            background: #ff6d77;
+            margin: 0 auto;
+            padding: 10px 20px;
+            z-index: 100;
+            text-align: left;
+            display: none;
+            .border-bottom{
+                border-bottom: 1px solid #eee;
+            }
+            li{
+                display: block;
+                list-style: none;
+                margin: 0;
                 padding:0;
-                z-index: 100;
-                display: none;
-
-                li{
+                a{
+                    color: white;
                     display: block;
-                    list-style: none;
-                    margin: 0;
-                    padding:0;
-
-                    a{
-                      display: block;
-                      padding: 10px 8px;
-                      border-bottom: 1px solid #eee;
-                      font-size: 14px;
-                      text-decoration: none;
-                    }
+                    padding: 10px 8px;
+                    font-size: 14px;
+                    text-decoration: none;
                 }
             }
-            // PC表示
-            @media(min-width: 768px){
+        }
+        // PC表示
+        @media(min-width: 768px){
+            .header_icon{
                 float: right;
                 .pc_navi{
                     padding-top: 10px;
                 }
-                #sp_navi_btn{
-                    display: none;
-                }
             }
+            .sp_navi{
+                display: none;
+            }
+        }
             
-            // スマホ表示
-            @media(max-width: 767px){
+        // スマホ表示
+        @media(max-width: 767px){
+            .header_icon{
                 .pc_navi{
                     display: none;
                 }
             }
-            
         }
     }
 }
@@ -385,7 +391,7 @@ footer{
         margin-bottom: 20px;
         a{
             color: black;
-            @include fontsize(20);
+            @include fontsize(14);
             text-align: center;
             letter-spacing: 0.1rem;
         }
